@@ -8,74 +8,48 @@
 </head>
 <body>
     <div class="conteudo">
-        <div class="calendario">
+        <div id="myElement"></div>
+        <div class="calendario" id="calendar">
             <header>
                 <h2 id="mes">Agosto</h2>
                 <a class="btn-prox" id ="btn_prox">></a>
                 <a class="btn-ant" id ="btn_ant"><</a>
             </header>
-            <table>
-                <thead>
-                    <tr>
-                        <td>DOM</td>
-                        <td>SEG</td>
-                        <td>TER</td>
-                        <td>QUA</td>
-                        <td>QUI</td>
-                        <td>SEX</td>
-                        <td>SAB</td>
-                    </tr>
-                </thead>
-                <tbody id="dias">
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td> 
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td> 
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td> 
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td> 
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td> 
-                    </tr>
-                </tbody>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody id="dias">
+                    </tbody>
+                </table>
             </table>
             <footer class="ano" id ="ano">ano</footer>
         </div>    
     </div>
+    <!-- A caixa lateral -->
+<div id="task-box" class="task-box">
+    <h2>Tarefas do dia</h2>
+    <ul id="task-list" class="task-list">
+      <!-- As tarefas do dia -->
+      <li>
+        <span>Exemplo de tarefa</span>
+        <input type="checkbox">
+    </li>
+    <li>
+        <span>Outra tarefa</span>
+        <input type="checkbox">
+    </li>
+</ul>
+    <input id="new-task" type="text" placeholder="Nova tarefa">
+    <button id="add-task">Adicionar tarefa</button>
+  </div>
 </body>
 </html> 

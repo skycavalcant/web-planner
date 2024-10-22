@@ -75,10 +75,13 @@ h2{
     background: rgb(233, 224, 224) ;
     color: rgb(209, 160, 160);
 }
-.calendario table .dia-atual{
-    background: rgb(151, 97, 97);
-    color: rgb(75, 37, 37);
+
+.today {
+    background-color: rgb(138, 94, 94); 
+    font-weight: bold; 
+    color: black; 
 }
+
 .calendario .mes-anterior, .calendario .proximo-mes{
     color: rgb(131, 116, 116);
     background: rgb(188, 143, 143);
@@ -106,3 +109,99 @@ h2{
 .event:hover::after{
     background: white;
 }
+/* Caixa lateral */
+.hidden {
+    display: none;
+  }
+
+.task-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    display: none; 
+    
+  }
+.task-box h2 {
+    color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    font-size: medium;
+
+}  
+.task-box.show {
+    display: block;
+    background-color: rgb(151, 97, 97); !important; /* Cor de fundo da caixa */
+    background-image: none;
+    border-radius: 20px;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Lista de tarefas */
+.task-list {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+/* Estilizar os itens da lista */
+.task-list li {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+    border-bottom: 1px solid #d30a0a; 
+}
+
+/* Estilizar o checkbox */
+.task-list input[type="checkbox"] {
+    appearance: none;
+    width: 20px; 
+    height: 20px; 
+    border: 2px solid rgb(138, 94, 94); 
+    border-radius: 4px; 
+    cursor: pointer; 
+    position: relative; 
+}
+
+/* Estilo quando o checkbox está marcado */
+.task-list input[type="checkbox"]:checked {
+    background-color: rgb(153, 131, 131);
+}
+
+/* Criar um "check" personalizado */
+.task-list input[type="checkbox"]:checked::after {
+    content: ''; 
+    position: absolute;
+    left: 4px; 
+    top: 0; 
+    width: 10px; 
+    height: 20px; 
+    border: solid white; 
+    border-width: 0 2px 2px 0; 
+}
+.task-list li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Input e o botão */
+#new-task {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+#add-task {
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #add-task {
+    background-color: #a55757;
+    color: #000;
+  }
